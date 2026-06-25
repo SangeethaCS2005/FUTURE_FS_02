@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini CRM Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Mini CRM</div>
+
+        <ul class="nav-links">
+            <li><a href="#addLeadSection">Add New Lead</a></li>
+            <li><a href="#leadListSection">Lead List</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard -->
+
+    <section id="dashboardSection">
+
+        <h1>Dashboard</h1>
+
+        <div class="stats">
+
+            <div class="card">
+                <h2 id="totalLeads">0</h2>
+                <p>Total Leads</p>
+            </div>
+
+            <div class="card">
+                <h2 id="newLeads">0</h2>
+                <p>New</p>
+            </div>
+
+            <div class="card">
+                <h2 id="contactedLeads">0</h2>
+                <p>Contacted</p>
+            </div>
+
+            <div class="card">
+                <h2 id="convertedLeads">0</h2>
+                <p>Converted</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Add Lead -->
+
+    <section id="addLeadSection">
+
+        <h1>Add New Lead</h1>
+
+        <form id="leadForm">
+
+            <div class="form-group">
+                <label>Client Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Client Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Lead Source</label>
+                <input type="text" id="source" required>
+            </div>
+
+            <div class="form-group">
+                <label>Status</label>
+
+                <select id="status">
+                    <option value="New">New</option>
+                    <option value="Contacted">Contacted</option>
+                    <option value="Converted">Converted</option>
+                </select>
+            </div>
+
+            <button type="submit">
+                Add Lead
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Lead List -->
+
+    <section id="leadListSection">
+
+        <h1>Lead List</h1>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Source</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="leadTable"></tbody>
+
+        </table>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
